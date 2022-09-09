@@ -1,0 +1,169 @@
+.container{
+    display: grid;
+    grid-template-columns: 0.3fr 0.4fr 0.3fr;
+    overflow-x: hidden;
+    padding-top: 6rem;
+}
+
+@keyframes to-and-fro {
+    from {
+        top: 0px;
+    }
+    to {
+        top: 100px;
+    }
+}
+
+.images{
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+    place-items: center;
+    padding-top: 2rem;
+}
+@keyframes repeatit {
+    from {
+        top: 0;
+    }
+    to {
+        top: 10px;
+    }
+}
+.images img{
+    width: 25%;
+    position: relative;
+    animation: repeatit 1s linear 0s infinite alternate;
+}
+.images img:last-child{
+    width: 35%;
+}
+
+.img1{
+    margin-right: 4rem;
+}
+.img2{
+    margin-left: 4rem;
+}
+
+.home{
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+.home h1{
+    font-size: 4.5rem;
+    margin: 0 0.5em;
+    text-align: center;
+    font-weight: 800;
+}
+
+.home p{
+    font-size: 2rem;
+    margin: 0;
+    text-align: center;
+}
+
+.btn{
+    border: 2px solid rgb(156 163 175);
+    padding: 1.5rem 3rem;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    margin-top: 3rem;
+}
+.btn:hover{
+    cursor: pointer;
+    box-shadow: rgb(88 88 88) 0px 0px 25px, rgb(88 88 88) 0px 0px 50px;
+}
+
+
+.section{
+    display: grid;
+    grid-template-columns: 0.4fr 0.6fr;
+    height: 80vh;
+    margin-top: 20vh;
+    align-items: center;
+    justify-items: center;
+}
+
+.content{
+    height: 100vh;
+    overflow-y: auto;
+}
+::-webkit-scrollbar {display:none;}
+
+.section .home{
+    height: 80vh;
+}
+.section h1{
+    width: 80%;
+}
+.section p{
+    color: rgb(156 163 175);
+    font-size: 1.5rem;
+    width: 80%;
+}
+
+.img3{
+    width: 40%;
+    margin: auto 0;
+}
+
+
+@media only screen and (max-width: 992px){
+    .home h1{
+        font-size: 2.5rem;
+    }
+
+    .home p{
+        font-size: 1.5rem;
+    }
+
+    .btn{
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+
+    .section{
+        display: block;
+    }
+
+    .section .home{
+        height: 40vh;
+    }
+
+    .section p{
+        font-size: 1.2rem;
+    }
+
+    .img3{
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 576px){
+    .home h1{
+        font-size: 1.5rem;
+    }
+
+    .home p{
+        font-size: 1rem;
+    }
+
+    .btn{
+        padding: 1rem 2rem;
+        font-size: 0.8rem;
+    }
+
+    .section p{
+        font-size: 0.8rem;
+    }
+
+    .section .home{
+        height: 20vh;
+    }
+}
